@@ -1,7 +1,7 @@
 # excel-merger
 Speedy Excel/CSV combining/merging/consolidating tool
 
-![Build Status](https://github.com/arif-basri/excel-merger/actions/workflows/ci.yml/badge.svg)
+![Build Status](https://github.com/arif-basri/excel-merger/actions/workflows/release.yml/badge.svg)
 [![Documentation Status](https://readthedocs.org/projects/excel-merger/badge/?version=latest)](https://excel-merger.readthedocs.io/en/latest/?badge=latest)
 [![codecov](https://codecov.io/github/arif-basri/excel-merger/branch/testing/graph/badge.svg?token=DSXB8A7OFO)](https://codecov.io/github/arif-basri/excel-merger)
 
