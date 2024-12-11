@@ -31,15 +31,18 @@ jobs:
       run: |
         pyinstaller src/main.py
 
+    - name: Create zip file
+      run: |
+        powershell Compress-Archive -Path dist\* -DestinationPath dist\main.zip
 
     - name: Release
       id: create_release
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          dist/main.exe
+          dist/main.zip
         token: ${{ secrets.RELEASE_ACTION_TOKEN }}
-        release_name: ${{ github.ref }}
+        name: ${{ github.ref }}
         body: |
           Release for ${{ github.ref }}
-          - [main.exe](
+          - [main.zip]
