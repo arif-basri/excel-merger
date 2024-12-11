@@ -22,8 +22,7 @@ python src/main.py
 ## Contributing
 To contribute to excel-merger, clone this repo locally and commit your code on a separate branch. Please write unit tests for your code, and run the linter before opening a pull-request:
 
-```bash
+
 
 ## License
 The source code is released under the Mozilla Public License Version 2.0. See [LICENSE](LICENSE) for more information.
-```
