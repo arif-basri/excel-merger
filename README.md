@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-Extract the main.zip file and execute main.exe inside the folder.
+Extract the ExcelMerger.zip file and execute ExcelMerger - v(x.y.z).exe inside the folder.
 
 Otherwise, download the source code and run the following command (Python 3.6+ required):
 
