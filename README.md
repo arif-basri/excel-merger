@@ -2,8 +2,6 @@
 Speedy Excel/CSV files combining/merging/consolidating tool. This serves as alternative to PowerQuery, VBA, macro or writing own code to combine multiple Excel/CSV files.
 
 
-[
-
 ![Build Status](https://github.com/arif-basri/excel-merger/actions/workflows/release.yml/badge.svg)
 [![Documentation Status](https://readthedocs.org/projects/excel-merger/badge/?version=latest)](https://excel-merger.readthedocs.io/en/latest/?badge=latest)
 [![codecov](https://codecov.io/github/arif-basri/excel-merger/branch/testing/graph/badge.svg?token=DSXB8A7OFO)](https://codecov.io/github/arif-basri/excel-merger)
