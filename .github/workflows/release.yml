@@ -29,7 +29,7 @@ jobs:
 
     - name: Build executable
       run: |
-        pyinstaller src/main.py -n ExcelMerger
+        pyinstaller src/main.py -n "ExcelMerger - ${{ github.ref_name }}"
 
     - name: Create zip file
       run: |
