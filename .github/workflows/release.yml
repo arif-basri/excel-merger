@@ -29,20 +29,24 @@ jobs:
 
     - name: Build executable
       run: |
-        pyinstaller src/main.py
+        pyinstaller src/main.py -n "ExcelMerger - ${{ github.ref_name }}"
 
     - name: Create zip file
       run: |
-        powershell Compress-Archive -Path dist\* -DestinationPath dist\main.zip
+        powershell Compress-Archive -Path dist\* -DestinationPath dist\ExcelMerger.zip
 
-    - name: Release
+    - name: Build Changelog
+      id: build_changelog
+      uses: mikepenz/release-changelog-builder-action@v5
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASE_ACTION_TOKEN }}
+
+    - name: Create Release
       id: create_release
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          dist/main.zip
+          dist/ExcelMerger.zip
         token: ${{ secrets.RELEASE_ACTION_TOKEN }}
         name: Excel Merger - ${{ github.ref_name }}
-        body: |
-          Release for ${{ github.ref }}
-          - [main.zip]
+        body: ${{steps.github_release.outputs.changelog}}
