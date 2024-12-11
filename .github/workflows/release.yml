@@ -38,7 +38,7 @@ jobs:
       with:
         files: |
           dist/main.exe
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.RELEASE_ACTION_TOKEN }}
         release_name: ${{ github.ref }}
         body: |
           Release for ${{ github.ref }}
