@@ -42,7 +42,7 @@ jobs:
         files: |
           dist/main.zip
         token: ${{ secrets.RELEASE_ACTION_TOKEN }}
-        name: ${{ github.ref }}
+        name: Excel Merger - ${{ github.ref_name }}
         body: |
           Release for ${{ github.ref }}
           - [main.zip]
