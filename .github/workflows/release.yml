@@ -32,24 +32,6 @@ jobs:
         pyinstaller --onefile src/main.py
 
 
-    - name: Create Release
+    - name: Release
       id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        draft: false
-        prerelease: false
-
-    - name: Upload Release Asset
-      id: upload-release-asset
-      uses: sekwah41/upload-release-assets@v1.1.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-        asset_path: ./excel-merge.exe
-        asset_name: excel-merge.exe
-        asset_content_type: application/octet-stream
+      uses: softprops/action-gh-release@v2
