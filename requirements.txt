@@ -1,2 +1,5 @@
 # Add your dependencies here
 sphinx
+pytest
+pytest-cov
+tox
